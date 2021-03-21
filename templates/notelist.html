@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    home
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <td>category</td>
+            <td>context</td>
+
+        </tr>
+        </thead>
+        {% for row in notelist %}
+        <tr>
+            <td>{{ row.category }}</td>
+            <td>{{ row.context }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

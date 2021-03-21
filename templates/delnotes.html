@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete your notes
+{% endblock %}
+
+{% block main %}
+    <form action="/delnotes" method="POST">
+        <div class="form-group">
+        <i style='font-size:24px' class='fas'>&#xf12d;</i></div>
+        <div>
+             <label>Input one or more tags:</label>
+        </div>
+
+        <div class="form-group has-success">
+            <ul class="navbar-nav mr-auto mt-2">
+                <li >
+                    <input autocomplete="off" autofocus class="form-control form-control-sm" name="tag.1" placeholder="tag.1" type="int">
+                </li>
+                <li>
+                    <input autocomplete="off" autofocus class="form-control form-control-sm" name="tag.2" placeholder="tag.2" type="int">
+                </li>
+                <li>
+                    <input autocomplete="off" autofocus class="form-control form-control-sm" name="tag.3" placeholder="tag.3" type="int">
+                </li>
+            </ul>
+        </div>
+
+
+        <button class="btn btn-outline-danger" type="submit">Discard</button>
+    </form>
+{% endblock %}

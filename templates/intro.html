@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome!
+{% endblock %}
+
+{% block main %}
+<body>
+    <h1 style = "color: #4C2132" class="font-italic">
+        Welcome, {{name}}
+    </h1>
+    <h3 style = "color: #4C2132" class="font-italic">
+        Click "+" to add notes and "-" to delete notes.
+    </h3>
+    <img class="img-responsive" src="{{ magic }}" alt = "Picture of a magic box" width="400"
+       height="400">
+</body>
+
+{% endblock %}

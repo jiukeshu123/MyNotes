@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Add Notes
+{% endblock %}
+
+{% block main %}
+    <form action="/addnotes" method="POST">
+        <div class="form-group">
+        <i style='font-size:24px' class='far'>&#xf044;</i></div>
+        <div class="form-group">
+            <select name = "category">
+                <option value="" disabled selected hidden>Select a category</option>
+                <option>URL</option>
+                <option>Ideas</option>
+                <option>Others</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <div>
+               <label>Title</label>
+            </div>
+               <input autocomplete="off" type="name" class="form-control" placeholder="" name = "title">
+        </div>
+
+        <div class="form-group">
+            <div>
+               <label>Content</label>
+            </div>
+
+            <textarea name="context"></textarea>
+        </div>
+
+
+        <button class="btn btn-outline-success" type="submit">Add</button>
+    </form>
+{% endblock %}
